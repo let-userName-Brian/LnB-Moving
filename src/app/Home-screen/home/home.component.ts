@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { map } from 'rxjs/operators';
 import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -29,5 +30,23 @@ export class HomeComponent {
     })
   );
 
-  constructor(private breakpointObserver: BreakpointObserver) {}
+  constructor(private breakpointObserver: BreakpointObserver, private router: Router) {}
+
+  navigateToMain(i: number) {
+    console.log(i);
+    let url = '';
+    switch (i) {
+      case 1:
+        url = '/projects';
+        break;
+        case 2:
+          url = '/finances';
+          break;
+          case 3:
+            url = '/settings';
+            break;
+          }
+    console.log(url);
+    this.router.navigateByUrl(url);
+  }
 }

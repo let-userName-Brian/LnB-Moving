@@ -10,8 +10,7 @@
               <mat-icon>more_vert</mat-icon>
             </button>
             <mat-menu #menu="matMenu" xPosition="before">
-              <button mat-menu-item>Expand</button>
-              <button mat-menu-item>Remove</button>
+              <button mat-menu-item (click)="navigateToMain(i)">Expand</button>
             </mat-menu>
           </mat-card-title>
         </mat-card-header>
@@ -20,7 +19,7 @@
             <!-- card one -->
             <app-dnd *ngIf="0 == i"></app-dnd>
             <!-- card two -->
-            <p *ngIf="1 == i">List of projects (1000ft view)</p>
+            <app-project-table *ngIf="1 == i"></app-project-table>
             <!-- card three -->
             <app-data-table *ngIf="2 == i"></app-data-table>
             <!-- card four -->

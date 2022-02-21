@@ -23,7 +23,10 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
-import { ProjectTableComponent } from './Home-screen/project-table/project-table.component'
+import { ProjectTableComponent } from './Home-screen/project-table/project-table.component';
+import { FinancesComponent } from './finances/finances.component';
+import { DocumentsComponent } from './documents/documents.component';
+import { ProjectsComponent } from './projects/projects.component'
 
 @NgModule({
   declarations: [
@@ -32,7 +35,10 @@ import { ProjectTableComponent } from './Home-screen/project-table/project-table
     DndComponent,
     SideNavComponent,
     DataTableComponent,
-    ProjectTableComponent
+    ProjectTableComponent,
+    FinancesComponent,
+    DocumentsComponent,
+    ProjectsComponent
   ],
   imports: [
     BrowserModule,
