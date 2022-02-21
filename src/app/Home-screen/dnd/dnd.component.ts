@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-dnd',
@@ -8,18 +9,12 @@ import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/dr
 })
 export class DndComponent {
   todo = [
-    'Get to work',
-    'Pick up groceries',
-    'Go home',
-    'Fall asleep'
+    'Seperate',
+    'Find Contract (Lydia)'
   ];
 
   done = [
-    'Get up',
-    'Brush teeth',
-    'Take a shower',
-    'Check e-mail',
-    'Walk dog'
+    'Find Job (Brian)'
   ];
 
   drop(event: CdkDragDrop<string[]>): void {
@@ -31,5 +26,12 @@ export class DndComponent {
           event.previousIndex,
           event.currentIndex);
     }
+  }
+
+  onSubmit(f: NgForm){
+    const newTodo = JSON.stringify(f.value.first).slice(1, -1);
+    this.todo.push(newTodo);
+    //Store new Todo state in local storage
+    localStorage.setItem('todos', newTodo);
   }
 }

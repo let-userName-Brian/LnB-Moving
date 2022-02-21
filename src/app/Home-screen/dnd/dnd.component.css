@@ -1,26 +1,48 @@
 .container {
   width: 400px;
   max-width: 100%;
+  margin-top: -10;
   margin: 0 20px;
   display: inline-block;
   vertical-align: top;
+  margin-right: 0;
+  align-items: right;
 }
 
-.list {
+.todo-list {
   border: solid 1px #ccc;
   min-height: 60px;
-  background: white;
+  background-color: rgb(229, 245, 6);
   border-radius: 4px;
   display: block;
   overflow: hidden;
 }
 
-.list-item {
+.done-list {
+  border: solid 1px #ccc;
+  min-height: 60px;
+  background: rgb(45, 122, 62);
+  border-radius: 4px;
+  display: block;
+  overflow: hidden;
+}
+
+.todo-list-item {
   padding: 20px 10px;
   border-bottom: solid 1px #ccc;
   box-sizing: border-box;
   cursor: move;
-  background: white;
+  background: rgb(235, 235, 235);
+  color: black;
+  font-size: 14px;
+}
+
+.done-list-item {
+  padding: 20px 10px;
+  border-bottom: solid 1px #ccc;
+  box-sizing: border-box;
+  cursor: move;
+  background: rgb(235, 235, 235);
   color: black;
   font-size: 14px;
 }
@@ -51,3 +73,26 @@
   opacity: 0;
 }
 
+.add-container{
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  height: 100%;
+  width: 25%;
+}
+
+.card-container{
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  height: 100%;
+  width: 100%;
+}
+
+.input-field{
+  height: 2rem;
+  width: 100%;
+  margin-bottom: 1rem;
+  margin-top: 3rem;
+  margin-right: 1rem;
+}
