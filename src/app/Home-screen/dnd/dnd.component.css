@@ -96,3 +96,10 @@
   margin-top: 3rem;
   margin-right: 1rem;
 }
+
+mat-icon{
+  float: right;
+  cursor: pointer;
+  margin-top: auto;
+  margin-bottom: auto;
+}

@@ -35,4 +35,12 @@ export class DndComponent {
     localStorage.setItem('todos', newTodo);
     f.reset();
   }
+
+  removeTodo(i: number){
+    this.todo.splice(i, 1);
+  }
+
+  removeDone(j: number){
+    this.done.splice(j, 1);
+  }
 }

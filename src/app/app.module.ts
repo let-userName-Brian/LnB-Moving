@@ -28,6 +28,7 @@ import { FinancesComponent } from './finances/finances.component';
 import { DocumentsComponent } from './documents/documents.component';
 import { ProjectsComponent } from './projects/projects.component'
 
+
 @NgModule({
   declarations: [
     AppComponent,
