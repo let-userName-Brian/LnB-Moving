@@ -17,12 +17,13 @@ import { SideNavComponent } from './side-nav/side-nav.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
-import { DataTableComponent } from './Home-screen/data-table/data-table.component';
+import { DataTableComponent } from './Home-screen/finance-table/data-table.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatInputModule } from '@angular/material/input';
-import { FormsModule } from '@angular/forms'
+import { FormsModule } from '@angular/forms';
+import { ProjectTableComponent } from './Home-screen/project-table/project-table.component'
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { FormsModule } from '@angular/forms'
     HomeComponent,
     DndComponent,
     SideNavComponent,
-    DataTableComponent
+    DataTableComponent,
+    ProjectTableComponent
   ],
   imports: [
     BrowserModule,

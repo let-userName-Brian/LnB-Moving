@@ -32,10 +32,10 @@ export class DataTableComponent implements AfterViewInit {
   onSubmit(f: NgForm){
     let cost = f.value.cost;
     let item = f.value.item;
-    
     this.dataSource.addData(cost, item).subscribe((res) => {
-    this.table.dataSource = res
+      this.table.dataSource = res
     });
+    f.reset();
     
   }
 }

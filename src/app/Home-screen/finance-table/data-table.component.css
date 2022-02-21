@@ -17,3 +17,11 @@ input {
 input:last-child {
   float: right;
 }
+
+.price-cell{
+  text-align: left; 
+}
+
+.name-cell{
+  text-align: left; 
+}

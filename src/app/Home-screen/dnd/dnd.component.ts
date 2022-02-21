@@ -33,5 +33,6 @@ export class DndComponent {
     this.todo.push(newTodo);
     //Store new Todo state in local storage
     localStorage.setItem('todos', newTodo);
+    f.reset();
   }
 }
