@@ -1,3 +1,19 @@
 .full-width-table {
   width: 100%;
 }
+
+input {
+  height: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  width: 45%;
+  border: 1px solid;
+  float: left;
+}
+* {
+  margin: 10;
+}
+
+input:last-child {
+  float: right;
+}

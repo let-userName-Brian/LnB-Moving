@@ -3,6 +3,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTable } from '@angular/material/table';
 import { DataTableDataSource, DataTableItem } from './data-table-datasource';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-data-table',
@@ -26,5 +27,11 @@ export class DataTableComponent implements AfterViewInit {
     this.dataSource.sort = this.sort;
     this.dataSource.paginator = this.paginator;
     this.table.dataSource = this.dataSource;
+  }
+
+  onSubmit(f: NgForm){
+    let cost = f.value.cost;
+    let item = f.value.item;
+    this.dataSource.addData(cost, item).subscribe();
   }
 }
