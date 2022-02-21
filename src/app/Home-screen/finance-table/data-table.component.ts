@@ -8,7 +8,7 @@ import { NgForm } from '@angular/forms';
 @Component({
   selector: 'app-data-table',
   templateUrl: './data-table.component.html',
-  styleUrls: ['./data-table.component.css']
+  styleUrls: ['./data-table.component.css'],
 })
 export class DataTableComponent implements AfterViewInit {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
@@ -29,13 +29,12 @@ export class DataTableComponent implements AfterViewInit {
     this.table.dataSource = this.dataSource;
   }
 
-  onSubmit(f: NgForm){
+  onSubmit(f: NgForm) {
     let cost = f.value.cost;
     let item = f.value.item;
     this.dataSource.addData(cost, item).subscribe((res) => {
-      this.table.dataSource = res
+      this.table.dataSource = res;
     });
     f.reset();
-    
   }
 }

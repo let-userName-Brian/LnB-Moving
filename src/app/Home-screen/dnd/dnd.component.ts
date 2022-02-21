@@ -1,5 +1,9 @@
 import { Component } from '@angular/core';
-import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
+import {
+  CdkDragDrop,
+  moveItemInArray,
+  transferArrayItem,
+} from '@angular/cdk/drag-drop';
 import { NgForm } from '@angular/forms';
 
 @Component({
@@ -8,27 +12,28 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./dnd.component.css'],
 })
 export class DndComponent {
-  todo = [
-    'Seperate',
-    'Find Contract (Lydia)'
-  ];
+  todo = ['Seperate', 'Find Contract (Lydia)'];
 
-  done = [
-    'Find Job (Brian)'
-  ];
+  done = ['Find Job (Brian)'];
 
   drop(event: CdkDragDrop<string[]>): void {
     if (event.previousContainer === event.container) {
-      moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
+      moveItemInArray(
+        event.container.data,
+        event.previousIndex,
+        event.currentIndex
+      );
     } else {
-      transferArrayItem(event.previousContainer.data,
-          event.container.data,
-          event.previousIndex,
-          event.currentIndex);
+      transferArrayItem(
+        event.previousContainer.data,
+        event.container.data,
+        event.previousIndex,
+        event.currentIndex
+      );
     }
   }
 
-  onSubmit(f: NgForm){
+  onSubmit(f: NgForm) {
     const newTodo = JSON.stringify(f.value.first).slice(1, -1);
     this.todo.push(newTodo);
     //Store new Todo state in local storage
@@ -36,11 +41,11 @@ export class DndComponent {
     f.reset();
   }
 
-  removeTodo(i: number){
+  removeTodo(i: number) {
     this.todo.splice(i, 1);
   }
 
-  removeDone(j: number){
+  removeDone(j: number) {
     this.done.splice(j, 1);
   }
 }

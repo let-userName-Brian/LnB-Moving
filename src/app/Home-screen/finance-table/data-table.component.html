@@ -3,30 +3,53 @@
     <!-- Id Column -->
     <ng-container matColumnDef="id">
       <th mat-header-cell *matHeaderCellDef mat-sort-header>Price</th>
-      <td class="price-cell" mat-cell *matCellDef="let row">${{row.id}}</td>
+      <td class="price-cell" mat-cell *matCellDef="let row">${{ row.id }}</td>
     </ng-container>
 
     <!-- Name Column -->
     <ng-container matColumnDef="name">
       <th mat-header-cell *matHeaderCellDef mat-sort-header>Name</th>
-      <td class="name-cell" mat-cell *matCellDef="let row">{{row.name}}</td>
+      <td class="name-cell" mat-cell *matCellDef="let row">{{ row.name }}</td>
     </ng-container>
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
   </table>
 
-  <mat-paginator #paginator [length]="dataSource?.data?.length" [pageIndex]="0" [pageSize]="10"
-    [pageSizeOptions]="[5, 10, 20]" aria-label="Select page">
+  <mat-paginator
+    #paginator
+    [length]="dataSource?.data?.length"
+    [pageIndex]="0"
+    [pageSize]="10"
+    [pageSizeOptions]="[5, 10, 20]"
+    aria-label="Select page"
+  >
   </mat-paginator>
 </div>
 
 <div>
   <form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
     <div class="input">
-      <input class="cost-input-field" type="number" name="cost" ngModel required #cost="ngModel" placeholder="Cost...">
-      <input class="item-input-field" name="item" ngModel required #item="ngModel" placeholder="Item...">
+      <input
+        class="cost-input-field"
+        type="number"
+        name="cost"
+        ngModel
+        required
+        #cost="ngModel"
+        placeholder="Cost..."
+      />
+      <input
+        class="item-input-field"
+        name="item"
+        ngModel
+        required
+        #item="ngModel"
+        placeholder="Item..."
+      />
     </div>
-    <button mat-raised-button color="primary" class="add-todo">Add Expense</button>
+    <button mat-raised-button color="primary" class="add-todo">
+      Add Expense
+    </button>
   </form>
 </div>

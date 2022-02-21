@@ -26,8 +26,7 @@ import { FormsModule } from '@angular/forms';
 import { ProjectTableComponent } from './Home-screen/project-table/project-table.component';
 import { FinancesComponent } from './finances/finances.component';
 import { DocumentsComponent } from './documents/documents.component';
-import { ProjectsComponent } from './projects/projects.component'
-
+import { ProjectsComponent } from './projects/projects.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +38,7 @@ import { ProjectsComponent } from './projects/projects.component'
     ProjectTableComponent,
     FinancesComponent,
     DocumentsComponent,
-    ProjectsComponent
+    ProjectsComponent,
   ],
   imports: [
     BrowserModule,
@@ -59,9 +58,9 @@ import { ProjectsComponent } from './projects/projects.component'
     MatPaginatorModule,
     MatSortModule,
     MatInputModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

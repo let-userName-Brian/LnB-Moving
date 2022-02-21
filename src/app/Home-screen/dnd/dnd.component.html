@@ -2,29 +2,62 @@
   <div class="add-container">
     <div class="input">
       <form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
-        <input class="input-field" name="first" ngModel required #first="ngModel" placeholder="New Todo...">
-        <button mat-raised-button color="primary" class="add-todo">Add Todo</button>
+        <input
+          class="input-field"
+          name="first"
+          ngModel
+          required
+          #first="ngModel"
+          placeholder="New Todo..."
+        />
+        <button mat-raised-button color="primary" class="add-todo">
+          Add Todo
+        </button>
       </form>
     </div>
- </div>
-
-    <div class="container">
-      <h2>To do</h2>
-      <div cdkDropList #todoList="cdkDropList" [cdkDropListData]="todo" [cdkDropListConnectedTo]="doneList" class="todo-list"
-        (cdkDropListDropped)="drop($event)">
-        <div class="todo-list-item" *ngFor="let item of todo; let i = index" cdkDrag>{{item}}
-          <mat-icon aria-hidden="false"  (click)="removeTodo(i)">delete_forever</mat-icon>
-        </div>
-
-      </div>
-    </div>
-    <div class="container">
-      <h2>Done</h2>
-      <div cdkDropList #doneList="cdkDropList" [cdkDropListData]="done" [cdkDropListConnectedTo]="todoList" class="done-list"
-        (cdkDropListDropped)="drop($event)">
-        <div class="done-list-item" *ngFor="let item of done; let j = index" cdkDrag>{{item}}
-          <mat-icon aria-hidden="false" (click)="removeDone(j)">delete_forever</mat-icon>
-        </div>
+  </div>
+  <div class="container">
+    <h2>To do</h2>
+    <div
+      cdkDropList
+      #todoList="cdkDropList"
+      [cdkDropListData]="todo"
+      [cdkDropListConnectedTo]="doneList"
+      class="todo-list"
+      (cdkDropListDropped)="drop($event)"
+    >
+      <div
+        class="todo-list-item"
+        *ngFor="let item of todo; let i = index"
+        cdkDrag
+      >
+        {{ item }}
+        <mat-icon aria-hidden="false" (click)="removeTodo(i)"
+          >delete_forever</mat-icon
+        >
       </div>
     </div>
   </div>
+  <div class="container">
+    <h2>Done</h2>
+    <div
+      cdkDropList
+      #doneList="cdkDropList"
+      [cdkDropListData]="done"
+      [cdkDropListConnectedTo]="todoList"
+      class="done-list"
+      (cdkDropListDropped)="drop($event)"
+    >
+      <div
+        class="done-list-item"
+        *ngFor="let item of done; let j = index"
+        cdkDrag
+      >
+        {{ item }}
+        <mat-icon aria-hidden="false" (click)="removeDone(j)"
+          >delete_forever</mat-icon
+        >
+      </div>
+    </div>
+  </div>
+</div>
