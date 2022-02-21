@@ -1,0 +1,33 @@
+<div class="grid-container">
+  <h1 class="mat-h1">Dashboard</h1>
+  <mat-grid-list cols="2" rowHeight="450px">
+    <mat-grid-tile *ngFor="let card of cards | async; let i = index" [colspan]="card.cols" [rowspan]="card.rows">
+      <mat-card class="dashboard-card" style="overflow-y: scroll;">
+        <mat-card-header>
+          <mat-card-title>
+            {{card.title}}
+            <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu" xPosition="before">
+              <button mat-menu-item>Expand</button>
+              <button mat-menu-item>Remove</button>
+            </mat-menu>
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="dashboard-card-content">
+          <div class="card-content">
+            <!-- card one -->
+            <app-dnd *ngIf="0 == i"></app-dnd>
+            <!-- card two -->
+            <p *ngIf="1 == i">List of projects (1000ft view)</p>
+            <!-- card three -->
+            <app-data-table *ngIf="2 == i"></app-data-table>
+            <!-- card four -->
+            <p *ngIf="3 == i"></p>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
