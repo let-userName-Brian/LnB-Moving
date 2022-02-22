@@ -10,39 +10,45 @@
 }
 
 .todo-list {
-  border: solid 1px #ccc;
-  min-height: 60px;
-  background-color: rgb(229, 245, 6);
-  border-radius: 4px;
+  border: solid 1px #a7c6d2;
+  min-height: 40vh;
+  border-radius: 20px;
+  background-color: rgb(155, 135, 245);
   display: block;
   overflow: hidden;
+  color: black;
+  font-size: 14px;
+  font-style: bold;
 }
 
 .done-list {
-  border: solid 1px #ccc;
-  min-height: 60px;
-  background: rgb(45, 122, 62);
-  border-radius: 4px;
+  border: solid 1px #a7c6d2;
+  min-height: 40vh;
+  border-radius: 20px;
+  background-color: rgb(155, 135, 245);
   display: block;
   overflow: hidden;
+  color: black;
+  font-size: 14px;
+  font-style: bold;
 }
 
 .todo-list-item {
   padding: 20px 10px;
-  border-bottom: solid 1px #ccc;
+  border-bottom: solid 1px #a7c6d2;
   box-sizing: border-box;
   cursor: move;
-  background: rgb(235, 235, 235);
+  background: rgb(117, 179, 207, 0.8);
   color: black;
   font-size: 14px;
 }
 
 .done-list-item {
   padding: 20px 10px;
-  border-bottom: solid 1px #ccc;
+  border-bottom: solid 1px #a7c6d2;;
   box-sizing: border-box;
   cursor: move;
-  background: rgb(235, 235, 235);
+  background: rgb(117, 179, 207, 0.9);
   color: black;
   font-size: 14px;
 }
@@ -92,9 +98,15 @@
 .input-field{
   height: 2rem;
   width: 100%;
+  background-color: rgb(117, 179, 207, 0.5);
+  border: 1px solid rgb(218, 212, 212);
+  border-radius: 10px;
   margin-bottom: 1rem;
   margin-top: 3rem;
   margin-right: 1rem;
+  color: black;
+  font-size: 14px;
+  font-style: bold;
 }
 
 mat-icon{

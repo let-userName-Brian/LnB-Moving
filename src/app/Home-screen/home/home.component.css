@@ -1,13 +1,19 @@
 .grid-container {
-  margin: 20px;
+  margin: .5rem;
+  background: transparent;
+  color: white;
 }
 
 .dashboard-card {
   position: absolute;
+  color: rgb(70, 69, 69);
+  background: rgb(96, 65, 233, 0.3);
+  border-radius: 20px;
   top: 15px;
   left: 15px;
   right: 15px;
   bottom: 15px;
+  box-shadow: 3px 3px 10px rgb(92, 92, 92);
 }
 
 .more-button {
