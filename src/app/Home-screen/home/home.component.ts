@@ -14,7 +14,7 @@ export class HomeComponent {
     map(({ matches }) => {
       if (matches) {
         return [
-          { title: 'ToDos', cols: 2, rows: 1 },
+          { title: '', cols: 2, rows: 1 },
           { title: 'Future Projects', cols: 2, rows: 1 },
           { title: 'Finaces Overview', cols: 2, rows: 1 },
           { title: 'Card 4', cols: 2, rows: 1 },
@@ -22,7 +22,7 @@ export class HomeComponent {
       }
 
       return [
-        { title: 'ToDos', cols: 2, rows: 1 },
+        { title: '', cols: 2, rows: 1 },
         { title: 'Future Projects', cols: 1, rows: 1 },
         { title: 'Finaces Overview', cols: 1, rows: 2 },
         { title: 'Card 4', cols: 1, rows: 1 },
